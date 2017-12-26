@@ -1,0 +1,264 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.jiaobaowang.tianbo.UsbPrinterActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/printer_version_tv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="10dp"
+            android:text="打印机版本："
+            android:textColor="@color/colorBlack" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_weight="1"
+            android:text="------走纸测试------"
+            android:textColor="@color/colorBlack" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="走纸行数："
+                android:textColor="@color/colorBlack" />
+
+            <EditText
+                android:id="@+id/paper_walk_et"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:hint="请输入走纸行数，1-255"
+                android:inputType="number"
+                android:text="10" />
+
+            <Button
+                android:id="@+id/paper_walk_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="走纸测试" />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_weight="1"
+            android:text="------打印测试------"
+            android:textColor="@color/colorBlack" />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="左边距(0-255)：" />
+
+            <EditText
+                android:id="@+id/left_distance_et"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:inputType="number"
+                android:text="0" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="行距(0-255)：" />
+
+            <EditText
+                android:id="@+id/line_distance_et"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:inputType="number"
+                android:text="0" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="字体大小(1-4)：" />
+
+            <EditText
+                android:id="@+id/word_font_et"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:inputType="number"
+                android:text="2" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="灰度(0-7)：" />
+
+            <EditText
+                android:id="@+id/print_gray_et"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:inputType="number"
+                android:text="1" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="文字打印：" />
+
+            <EditText
+                android:id="@+id/print_text_et"
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:hint="输入打印内容"
+                android:inputType="textMultiLine"
+                android:scrollbars="vertical"
+                android:singleLine="false" />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/print_text_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="打印内容" />
+
+            <Button
+                android:id="@+id/print_text_clear_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="清空内容" />
+
+            <Button
+                android:id="@+id/print_text_sample_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="输入样例" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="二维码打印:" />
+
+            <EditText
+                android:id="@+id/print_qrcode_et"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="输入二维码的内容" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <Button
+                android:id="@+id/print_qrcode_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="二维码打印" />
+
+            <Button
+                android:id="@+id/print_qrcode_clear_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="清空内容" />
+
+            <Button
+                android:id="@+id/print_qrcode_sample_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="输入样例" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="条码打印:" />
+
+            <EditText
+                android:id="@+id/print_barcode_et"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="number"
+                android:hint="输入条码的内容" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <Button
+                android:id="@+id/print_barcode_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="条码打印" />
+
+            <Button
+                android:id="@+id/print_barcode_clear_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="清空内容" />
+
+            <Button
+                android:id="@+id/print_barcode_sample_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="输入样例" />
+        </LinearLayout>
+
+    </LinearLayout>
+</ScrollView>
